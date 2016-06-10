@@ -1,0 +1,53 @@
+.codcerin-navbar {
+  &__wrapper {
+    width: 100%;
+    background: $primary;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  &__logo {
+    @include tapable;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    color: $white;
+    background: $complement;
+    font-weight: bold;
+    display: inline-block;
+    border: 0.1rem solid $white;
+  }
+
+  &__tab-container {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__tab {
+    @include tapable;
+    color: $white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1.5rem 2.5rem;
+    border-radius: 0.2rem;
+    transition: all 0.3s;
+    &:hover {
+      color: $black80;
+    }
+    &--active {
+      &:hover {
+        color: $black80;
+      }
+      color: $black80;
+      background: $white;
+    }
+  }
+}

@@ -1,7 +1,21 @@
-h1 {
-  color: red;
+@import './variable';
+@import './mixin';
+
+html {
+  font-size: 10px;
 }
 
-p {
-  color: yellow;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica", "Arial";
+  background: $background;
 }
+
+.container {
+  width: 100%;
+  max-width: 90rem;
+  margin: auto;
+}
+
+@import './navbar/navbar';

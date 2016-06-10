@@ -30,10 +30,16 @@ module.exports = {
       include: APP_DIR
     }, {
       test: /\.scss$/,
-      loader: "style-loader!css-loader!postcss-loader!sass-loader"
+      loader: "style-loader!css-loader!postcss-loader!sass-loader",
+      include: path.join(__dirname, 'src/css')
     }, {
       test: /\.(jpg|png)$/,
-      loader: 'file-loader?name=img/img-[hash:6].[ext]'
+      loader: 'file-loader?name=img/img-[hash:6].[ext]',
+      include: IMAGE_DIR
+    }, {
+      test: /\.json$/,
+      loader: 'json-loader',
+      include: path.join(APP_DIR, 'data')
     }]
   }
 };
