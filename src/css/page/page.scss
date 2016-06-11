@@ -1,0 +1,39 @@
+/*
+  This part is for app page
+*/
+.codcerin-container {
+  padding-top: 2rem;
+}
+
+/*
+  This part is for home page
+*/
+.home-page {
+  &__container {
+    //
+  }
+  &__slider {
+    width: 90%;
+    margin: auto;
+    &__item {
+      @include fit_background_image;
+      height: 45rem;
+    }
+  }
+}
+
+/**
+  This part is for product page
+**/
+.product-page {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__card-container {
+    margin: 4rem;
+    margin-top: 0;
+  }
+}

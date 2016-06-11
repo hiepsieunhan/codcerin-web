@@ -1,0 +1,37 @@
+.codcerin-product-card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: flex-start;
+  padding: 2rem;
+  text-align: left;
+  width: 29rem;
+  &__product-photo {
+    @include fill_background_image;
+    @include tapable;
+    width: 25rem;
+    height: 25rem;
+  }
+  &__product-name {
+    @include tapable;
+    display: block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: $primary;
+    margin-bottom: 1.5rem;
+  }
+  &__product-description {
+    text-align: justify;
+    font-size: 1.2rem;
+    color: $black80;
+    margin-bottom: 1.5rem;
+  }
+  &__see-more-btn {
+    @include center_content;
+    @include tapable;
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 8rem;
+    height: 2.5rem;
+  }
+}

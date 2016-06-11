@@ -5,8 +5,20 @@
   user-select: none;
 }
 
-@mixin fill_background_image {
+@mixin fit_background_image {
   background: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@mixin fill_background_image {
+  background: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@mixin center_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -21,12 +21,13 @@ export default class App extends React.Component {
           <Slider {...settings}>
             {sliderImages.map((url, index) => {
               const style = {
-                backgroundImage: `url("/img/${url}")`
+                backgroundImage: `url("/img/slider/${url}")`
               }
               return (
                 <div className="home-page__slider__item" style={style} key={index}> </div>
               );
             })}
+
           </Slider>
         </div>
       </div>
