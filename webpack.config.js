@@ -1,9 +1,10 @@
 var path = require('path');
 var webpack = require('webpack');
+var autoprefixer = require('autoprefixer');
 
 var BUILD_DIR = path.resolve(__dirname, 'dist');
 var APP_DIR = path.resolve(__dirname, 'src/app');
-var IMAGE_DIR = path.resolve(__dirname, 'src/assets');
+var IMAGE_DIR = path.resolve(__dirname, 'src/assets/images');
 
 module.exports = {
   devtool: 'eval',
@@ -41,5 +42,6 @@ module.exports = {
       loader: 'json-loader',
       include: path.join(APP_DIR, 'data')
     }]
-  }
+  },
+  postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ]
 };

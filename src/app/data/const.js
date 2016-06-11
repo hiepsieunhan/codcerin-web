@@ -6,3 +6,5 @@ export const routeMap = {
 }
 
 export const menuTabs = ["home", "product", "tips", "contact"];
+
+export const sliderImages = ['test.jpg', 'test2.jpg', 'test3.jpg', 'test4.jpg']

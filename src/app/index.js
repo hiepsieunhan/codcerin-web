@@ -2,12 +2,18 @@ import '../css/index.scss';
 
 import React from 'react';
 import {render} from 'react-dom';
-import App from './containers/App';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
+
+import App from './containers/App';
+import Home from './containers/Home';
 
 render((
   <Router history={browserHistory}>
-    <Route path="/*" component={App}>
+    <Route path="/" component={App}>
+      <Route path="home" component={Home}/>
+      <Route path="product" component={Home}/>
+      <Route path="tips" component={Home}/>
+      <Route path="contact" component={Home}/>    
     </Route>
   </Router>
 ), document.getElementById('app'));

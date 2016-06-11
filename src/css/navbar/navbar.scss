@@ -18,13 +18,13 @@ This part is for navbar
   &__logo {
     @include tapable;
     font-size: 2.5rem;
-    padding: 0.8rem 1.5rem;
+    padding: 0.5rem 1.5rem;
     color: $white;
-    background: rgba(0, 0, 0, 0.7);
+    background: $primary-lighter;
     font-weight: bold;
+    border-radius: 0.3rem;
     display: inline-block;
-    border: 0.1rem solid $white;
-    margin: 1rem;
+    margin: 0.5rem;
   }
 
   &__tab-container {
@@ -41,6 +41,7 @@ This part is for navbar
     font-size: 1.3rem;
     font-weight: bold;
     padding: 1.5rem 2.5rem;
+    flex-shrink: 1;
     border-radius: 0.2rem;
     transition: all 0.3s;
     border-bottom: 0.4rem solid $primary;
@@ -62,7 +63,7 @@ This part is for routeBar
     @include tapable;
     font-size: 1.2rem;
     font-weight: 600;
-    color: $primary-darker;
+    color: $primary;
   }
 
   &__route {
