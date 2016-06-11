@@ -1,4 +1,4 @@
-export const dict = {
+export const routeMap = {
   "home": "Trang chủ",
   "product": "Sản phẩm",
   "contact": "liên hệ",

@@ -9,11 +9,10 @@ export default class App extends React.Component {
     const currentLocation = this.props.location.pathname;
 
     return (
-      <div className="codcerin-container">
+      <div>
         <NavBar location={currentLocation} />
-        <div>
+        <div className="container codcerin-container">
           <RouteBar location={currentLocation} />
-          <p> this is content </p>
           {this.props.children}
         </div>
       </div>

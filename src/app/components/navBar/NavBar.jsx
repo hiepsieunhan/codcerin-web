@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { dict, menuTabs} from '../../data/const';
+import { routeMap, menuTabs} from '../../data/const';
 import { browserHistory } from 'react-router';
 import { getPaths } from '../../utils/url';
 import classnames from 'classnames';
@@ -29,7 +29,7 @@ export default  class NavBar extends React.Component {
               <div className={classnames('codcerin-navbar__tab',
                                         {'codcerin-navbar__tab--active': tab == currentTab})}
                                         onClick={this.handleRouteClicked.bind(this, tab)}>
-                {dict[tab].toUpperCase()}
+                {routeMap[tab].toUpperCase()}
               </div>
             ))}
           </div>

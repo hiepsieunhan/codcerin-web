@@ -1,3 +1,6 @@
+/**
+This part is for navbar
+**/
 .codcerin-navbar {
   &__wrapper {
     width: 100%;
@@ -15,9 +18,9 @@
   &__logo {
     @include tapable;
     font-size: 2.5rem;
-    padding: 1rem 1.5rem;
+    padding: 0.8rem 1.5rem;
     color: $white;
-    background: $black50;
+    background: rgba(0, 0, 0, 0.7);
     font-weight: bold;
     display: inline-block;
     border: 0.1rem solid $white;
@@ -48,5 +51,28 @@
     &--active {
       border-bottom-color: $white60;
     }
+  }
+}
+
+/**
+This part is for routeBar
+**/
+.codcerin-routebar {
+  &__container {
+    @include tapable;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $primary-darker;
+  }
+
+  &__route {
+    &--last {
+      color: $black80;
+    }
+  }
+
+  &__dividor {
+    color: $black50;
+    margin: 0 0.5rem;
   }
 }
