@@ -9,7 +9,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
     box-sizing: border-box;
   }
 
@@ -18,10 +17,11 @@
     font-size: 2.5rem;
     padding: 1rem 1.5rem;
     color: $white;
-    background: $complement;
+    background: $black50;
     font-weight: bold;
     display: inline-block;
     border: 0.1rem solid $white;
+    margin: 1rem;
   }
 
   &__tab-container {
@@ -29,25 +29,24 @@
     justify-content: flex-end;
     flex-wrap: wrap;
     align-items: center;
+    align-self: flex-end;
   }
 
   &__tab {
     @include tapable;
-    color: $white;
-    font-size: 1.2rem;
+    color: $white60;
+    font-size: 1.3rem;
     font-weight: bold;
     padding: 1.5rem 2.5rem;
     border-radius: 0.2rem;
     transition: all 0.3s;
-    &:hover {
-      color: $black80;
+    border-bottom: 0.4rem solid $primary;
+    &:hover,
+    &--active {
+      color: $white;
     }
     &--active {
-      &:hover {
-        color: $black80;
-      }
-      color: $black80;
-      background: $white;
+      border-bottom-color: $white60;
     }
   }
 }
