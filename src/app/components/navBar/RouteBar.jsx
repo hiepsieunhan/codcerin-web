@@ -11,6 +11,12 @@ const RouteBar = ({location}) => {
   }
 
   const paths = getPaths(location);
+  if (paths.length <= 1) {
+    return (
+      <div></div>
+    );
+  }
+
   let currentRoute = '';
 
   return (

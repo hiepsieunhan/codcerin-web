@@ -4,3 +4,9 @@
   }
   user-select: none;
 }
+
+@mixin fill_background_image {
+  background: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

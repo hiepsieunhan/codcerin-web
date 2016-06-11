@@ -18,8 +18,8 @@ module.exports = {
   },
   output: {
     path: BUILD_DIR,
-    filename: 'bundle.js'
-    /*publicPath: '/'*/
+    filename: 'bundle.js',
+    publicPath: 'http://localhost:3000/'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()
