@@ -63,12 +63,13 @@ This part is for routeBar
     @include tapable;
     font-size: 1.2rem;
     font-weight: 600;
+    letter-spacing: -0.1rem;
     color: $primary;
   }
 
   &__route {
     &--last {
-      color: $black80;
+      //color: $black80;
     }
   }
 
