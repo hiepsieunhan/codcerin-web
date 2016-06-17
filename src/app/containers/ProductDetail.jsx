@@ -1,5 +1,6 @@
 import React from 'react';
 import { products, productNames } from '../data/product';
+import { SolidButton } from '../components/button';
 
 export default class ProductDetail extends React.Component {
 
@@ -31,6 +32,9 @@ export default class ProductDetail extends React.Component {
           </div>
         </div>
         <div className="product-detail-page__detail__container">
+          <div className="product-detail-page__detail__product-labeling-button">
+            <SolidButton text="Hướng dẫn sử dụng" theme="highlighted"/>
+          </div>
           <div className="product-detail-page__detail__header"> Thông tin chi tiết  </div>
           <div className="product-detail-page__detail__sub-header"> Liều lượng </div>
           <div className="product-detail-page__detail__dosage-table">
