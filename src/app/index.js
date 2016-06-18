@@ -8,6 +8,8 @@ import App from './containers/App';
 import Home from './containers/Home';
 import Product from './containers/Product';
 import ProductDetail from './containers/ProductDetail';
+import Tip from './containers/Tip';
+import Contact from './containers/Contact';
 
 render((
   <Router history={browserHistory}>
@@ -18,8 +20,8 @@ render((
         <IndexRoute component={Product}/>
         <Route path=":productName" component={ProductDetail}/>
       </Route>
-      <Route path="tips" component={Home}/>
-      <Route path="contact" component={Home}/>
+      <Route path="tips" component={Tip}/>
+      <Route path="contact" component={Contact}/>
     </Route>
   </Router>
 ), document.getElementById('app'));

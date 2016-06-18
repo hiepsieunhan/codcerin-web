@@ -1,8 +1,58 @@
 /*
   This part is for app page
 */
+
 .codcerin-container {
-  padding-top: 2rem;
+  min-height: 100%;
+  position: relative;
+}
+
+.codcerin__content-container {
+  padding: 2rem 0 10rem;
+}
+
+.codcerin-footer {
+  &__wrapper {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $primary;
+  }
+
+  &__container {
+    font-size: 1.2rem;
+    color: $white;
+    min-height: 6rem;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+
+  &__fb-icon {
+    width: 4rem;
+    height: 4rem;
+    margin: 0.5rem;
+  }
+
+  &__col {
+    flex-grow: 1;
+    text-align: center;
+    border-right: 1px solid $white60;
+    &--last {
+      border-right: 0;
+    }
+
+    &__content {
+      display: inline-block;
+      text-align: left;
+
+      &--center-content {
+        text-align: center;
+      }
+    }
+  }
 }
 
 /*
@@ -10,7 +60,6 @@
 */
 .home-page {
   &__container {
-    //
   }
   &__slider {
     width: 90%;
