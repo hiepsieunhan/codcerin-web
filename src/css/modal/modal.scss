@@ -1,0 +1,39 @@
+.codcerin-modal {
+  &__container {
+    position: fixed;
+    background: $black20;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  &__content-wrapper {
+    padding: 2rem;
+    background: $white;
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__close-btn {
+    @include tapable;
+    @include center_content;
+    font-size: 1.6rem;
+    width: 2rem;
+    height: 2rem;
+    color: $black80;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &:hover {
+      color: $highlighted;
+    }
+  }
+}

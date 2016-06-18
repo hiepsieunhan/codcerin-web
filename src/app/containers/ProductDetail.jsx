@@ -1,8 +1,13 @@
 import React from 'react';
 import { products, productNames } from '../data/product';
 import { SolidButton } from '../components/button';
+import Modal from '../components/modal/Modal';
 
 export default class ProductDetail extends React.Component {
+
+  state = {
+    showLabeling: false
+  };
 
   render () {
 
@@ -16,10 +21,11 @@ export default class ProductDetail extends React.Component {
 
     const imageStyle = {
       backgroundImage: `url("/img/product/${product.image}")`
-    }
+    };
 
     return (
       <div className="product-detail-page__container">
+        {this.state.showLabeling && <Modal content={<div className="product-detail-page__product-labeling"> hello world</div>} onClose={this.handleOpenLabeling.bind(this, false)}/>}
         <div className="product-detail-page__header__container">
           <div className="product-detail-page__header__product-image" style={imageStyle}></div>
           <div className="product-detail-page__header__product-detail">
@@ -33,7 +39,7 @@ export default class ProductDetail extends React.Component {
         </div>
         <div className="product-detail-page__detail__container">
           <div className="product-detail-page__detail__product-labeling-button">
-            <SolidButton text="Hướng dẫn sử dụng" theme="normal"/>
+            <SolidButton text="Hướng dẫn sử dụng" theme="normal"  onClick={this.handleOpenLabeling.bind(this, true)}/>
           </div>
           <div className="product-detail-page__detail__header"> Thông tin sản phẩm  </div>
           <div className="product-detail-page__detail__sub-header"> Liều lượng </div>
@@ -57,4 +63,14 @@ export default class ProductDetail extends React.Component {
       </div>
     );
   }
+
+  handleOpenLabeling = (shouldShow) => {
+    console.log('click!! ', shouldShow);
+    if (this.state.showLabeling != shouldShow) {
+      this.setState({
+        showLabeling: shouldShow
+      });
+    }
+  }
+
 }
