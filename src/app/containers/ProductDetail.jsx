@@ -25,7 +25,15 @@ export default class ProductDetail extends React.Component {
 
     return (
       <div className="product-detail-page__container">
-        {this.state.showLabeling && <Modal content={<div className="product-detail-page__product-labeling"> hello world</div>} onClose={this.handleOpenLabeling.bind(this, false)}/>}
+        {
+          this.state.showLabeling &&
+          <Modal
+            content={
+              <div className="product-detail-page__product-labeling">
+                <div dangerouslySetInnerHTML={{__html: product.detail.labeling}}></div>
+              </div>}
+            onClose={this.handleOpenLabeling.bind(this, false)}/>
+        }
         <div className="product-detail-page__header__container">
           <div className="product-detail-page__header__product-image" style={imageStyle}></div>
           <div className="product-detail-page__header__product-detail">

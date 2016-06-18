@@ -27,3 +27,18 @@
 @mixin fix_letter_spacing {
   letter-spacing: -1px;
 }
+
+@mixin style_scroll_bar {
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  }
+}
