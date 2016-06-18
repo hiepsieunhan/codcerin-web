@@ -9,6 +9,7 @@ import Home from './containers/Home';
 import Product from './containers/Product';
 import ProductDetail from './containers/ProductDetail';
 import Tip from './containers/Tip';
+import TipDetail from './containers/TipDetail';
 import Contact from './containers/Contact';
 
 render((
@@ -20,7 +21,10 @@ render((
         <IndexRoute component={Product}/>
         <Route path=":productName" component={ProductDetail}/>
       </Route>
-      <Route path="tips" component={Tip}/>
+      <Route path="tips">
+        <IndexRoute component={Tip}/>
+        <Route path=":tipName" component={TipDetail}/>
+      </Route>
       <Route path="contact" component={Contact}/>
     </Route>
   </Router>
