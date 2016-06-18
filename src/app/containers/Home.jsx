@@ -1,6 +1,9 @@
 import React from 'react';
 import Slider from 'react-slick';
+import { TipList } from './Tip';
+
 import { sliderImages } from '../data/const';
+import { tipNames } from '../data/tip';
 
 export default class App extends React.Component {
 
@@ -29,6 +32,9 @@ export default class App extends React.Component {
             })}
 
           </Slider>
+        </div>
+        <div className="home-page__tips-wrapper">
+          <TipList tipNames={tipNames.slice(0, 6)}/>
         </div>
       </div>
     );
