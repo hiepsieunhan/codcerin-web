@@ -212,3 +212,24 @@
     @include style_scroll_bar;
   }
 }
+
+/**
+  This part is for tip page
+**/
+
+.tip-page {
+
+  &__content-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 2rem;
+  }
+
+  &__card-container {
+    @include horizontal_center_content;
+    padding: 0 2rem;
+    margin-right: 2rem;
+    margin-bottom: 5rem;
+  }
+}

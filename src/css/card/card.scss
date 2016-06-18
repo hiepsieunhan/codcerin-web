@@ -1,11 +1,28 @@
+.codcerin-see-more-btn {
+  @include center_content;
+  @include tapable;
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 8rem;
+  height: 2.5rem;
+}
+
+/**
+This part is for Product Card
+**/
+
 .codcerin-product-card {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  align-items: flex-start;
-  padding: 2rem;
-  text-align: left;
-  width: 29rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: flex-start;
+    padding: 2rem;
+    text-align: left;
+    width: 29rem;
+  }
+
   &__product-photo {
     @include fill_background_image;
     @include tapable;
@@ -21,17 +38,41 @@
     margin-bottom: 1.5rem;
   }
   &__product-description {
+    @include normal_text;
     text-align: justify;
-    font-size: 1.2rem;
-    color: $black80;
     margin-bottom: 1.5rem;
   }
-  &__see-more-btn {
-    @include center_content;
-    @include tapable;
-    font-size: 1.2rem;
-    font-weight: 600;
-    width: 8rem;
-    height: 2.5rem;
+}
+
+/**
+  THis part is for Tip Card
+**/
+.codcerin-tip-card {
+
+  &__container {
+    width: 22rem;
   }
+
+  &__tip-photo {
+    @include fit_background_image;
+    width: 20rem;
+    height: 6rem;
+    border: 1px solid $black20;
+    margin-bottom: 1rem;
+  }
+
+  &__tip-title {
+    @include tapable;
+    @include fix_letter_spacing;
+    margin-bottom: 1rem;
+    color: $primary;
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+
+  &__tip-description {
+    @include normal_text;
+    margin-bottom: 4rem;
+  }
+
 }
