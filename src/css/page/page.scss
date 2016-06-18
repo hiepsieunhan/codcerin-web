@@ -237,4 +237,43 @@
     margin-right: 2rem;
     margin-bottom: 5rem;
   }
+
+  &__head {
+
+    &__container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 2rem 0 6rem;
+    }
+
+    &__detail {
+      margin-bottom: 2rem;
+    }
+
+    &__tip-title {
+      letter-spacing: -0.3rem;
+      font-size: 5rem;
+      line-height: 8rem;
+      font-weight: bold;
+    }
+
+    &__tip-description {
+      @include fix_letter_spacing;
+      font-size: 2rem;
+      color: $black20;
+      margin-bottom: 4rem;
+    }
+
+    &__tip-image-wrapper {
+      background: $white;
+      padding: 1.5rem;
+    }
+
+    &__tip-image {
+      @include fit_background_image;
+      width: 40rem;
+      height: 20rem;
+    }
+  }
 }

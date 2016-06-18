@@ -50,7 +50,7 @@ export default class ProductDetail extends React.Component {
             <SolidButton text="Hướng dẫn sử dụng" theme="normal"  onClick={this.handleOpenLabeling.bind(this, true)}/>
           </div>
           <div className="product-detail-page__detail__header"> Thông tin sản phẩm  </div>
-          <div className="product-detail-page__detail__sub-header"> Liều lượng </div>
+          <div className="codcerin-header"> Liều lượng </div>
           <div className="product-detail-page__detail__dosage-table">
             <div className="product-detail-page__detail__dosage-head">
               <div className="product-detail-page__detail__dosage-head__col product-detail-page__detail__dosage-table__col--border-right"> Tuổi </div>

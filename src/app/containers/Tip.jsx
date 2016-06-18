@@ -1,20 +1,41 @@
 import React from 'react';
 import TipCard from '../components/card/TipCard';
+import { SolidButton } from '../components/button';
 
+import { browserHistory } from 'react-router';
 import { tipNames, tips } from '../data/tip';
 
 export default class Tip extends React.Component {
 
   render () {
 
+    const firstTip = tips[tipNames[0]];
+
     return (
-      <div>
+      <div className="tip-page__container">
         <div className="tip-page__head__container">
-          
+          <div className="tip-page__head__detail">
+            <div className="tip-page__head__tip-title">
+              {firstTip.title.toUpperCase()}
+            </div>
+            <div className="tip-page__head__tip-description">
+              {firstTip.description.toUpperCase()}
+            </div>
+            <div className="codcerin-see-more-btn codcerin-see-more-btn--large">
+              <SolidButton text="Chi tiết" onClick={this.handleCardClicked.bind(this, tipNames[0])}/>
+            </div>
+          </div>
+          <div className="tip-page__head__tip-image-wrapper">
+            <div className="tip-page__head__tip-image" style={{backgroundImage: `url("/img/tip/${firstTip.image}")`}}></div>
+          </div>
         </div>
-        <TipList tipNames={tipNames}/>
+        <TipList tipNames={tipNames.slice(1)}/>
       </div>
     );
+  }
+
+  handleCardClicked = (tipName) => {
+    browserHistory.push(`/tips/${tipName}`);
   }
 }
 
