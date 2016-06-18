@@ -18,9 +18,9 @@ This part is for navbar
   &__logo {
     @include tapable;
     font-size: 2.5rem;
-    padding: 0.5rem 1.5rem;
+    padding: 0.8rem 1.5rem;
     color: $white;
-    background: $primary-lighter;
+    background: $black80;
     font-weight: bold;
     border-radius: 0.3rem;
     display: inline-block;
@@ -40,18 +40,18 @@ This part is for navbar
     color: $white60;
     font-size: 1.3rem;
     font-weight: bold;
-    padding: 1.5rem 2.5rem;
+    padding: 2rem 2.5rem;
     flex-shrink: 1;
     border-radius: 0.2rem;
     transition: all 0.3s;
-    //border-bottom: 0.4rem solid $primary;
+    border-bottom: 0.4rem solid $primary;
     &:hover,
     &--active {
       color: $white;
     }
     &--active {
-      //border-bottom-color: $white60;
-      background: rgba(255, 255, 255, 0.3);
+      border-bottom-color: $white60;
+      //background: rgba(255, 255, 255, 0.3);
     }
   }
 }

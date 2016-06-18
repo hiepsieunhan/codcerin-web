@@ -33,9 +33,9 @@ export default class ProductDetail extends React.Component {
         </div>
         <div className="product-detail-page__detail__container">
           <div className="product-detail-page__detail__product-labeling-button">
-            <SolidButton text="Hướng dẫn sử dụng" theme="highlighted"/>
+            <SolidButton text="Hướng dẫn sử dụng" theme="normal"/>
           </div>
-          <div className="product-detail-page__detail__header"> Thông tin chi tiết  </div>
+          <div className="product-detail-page__detail__header"> Thông tin sản phẩm  </div>
           <div className="product-detail-page__detail__sub-header"> Liều lượng </div>
           <div className="product-detail-page__detail__dosage-table">
             <div className="product-detail-page__detail__dosage-head">

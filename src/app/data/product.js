@@ -37,6 +37,6 @@ export const products = {
       description: "CODCERIN THAO DUOC là sự phối hợp tối ưu giữa Codein, Guaifenesin dùng trong trường hợp ho ban ngày giúp điều trị các triệu chứng ho, làm long đờm và thông khí đường hô hấp gặp trong các chứng cảm lạnh hoặc do viêm nhiễm đường hô hấp trên.",
     }
   }
-}
+};
 
 export const productNames = ["codcerin-d", "codcerin-e", "codcerin-exp", "codcerin-thao-duoc"];

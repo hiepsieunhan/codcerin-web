@@ -17,9 +17,12 @@
       }
     }
 
-    &--highlighted {
-      color: $black80;
+    &--normal {
+      color: $primary-lighter;
       background: $white;
+      &:hover {
+        color: $primary;
+      }
     }
   }
 }

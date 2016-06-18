@@ -70,6 +70,7 @@
 
       &__name {
         font-size: 3.5rem;
+        @include fix_letter_spacing;
         font-weight: bold;
         margin-bottom: 2rem;
         color: $black;
@@ -95,6 +96,10 @@
       position: absolute;
       top: 2rem;
       right: 2rem;
+    }
+
+    &__header, &__sub-header {
+      @include fix_letter_spacing;
     }
 
     &__header {

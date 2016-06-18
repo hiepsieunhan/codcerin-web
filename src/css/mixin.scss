@@ -22,3 +22,7 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin fix_letter_spacing {
+  letter-spacing: -1px;
+}
