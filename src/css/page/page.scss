@@ -303,3 +303,65 @@
     @include normal_text;
   }
 }
+
+/**
+  This part is for contact page
+**/
+.contact-page {
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  &__header {
+    @include fix_letter_spacing;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 4rem;
+    color: $primary;
+    font-weight: bold;
+  }
+
+  &__address {
+    margin-top: 4rem;
+    max-width: 35rem;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: $black80;
+
+    &--value {
+      color: $black50;
+    }
+
+    &__contact {
+      margin-top: 2rem;
+      line-height: 3rem;
+    }
+
+    &__icon {
+      @include disable_select;
+      width: 2rem;
+      height: 2rem;
+      position: relative;
+      top: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__address, &__commercial, &__google-map-wrapper {
+    margin-bottom: 2rem;
+  }
+
+  &__google-map-wrapper {
+    margin-top: 3rem;
+  }
+}
+
+#codcerin-google-map {
+  width: 39rem;
+  height: 22rem;
+  background: $primary;
+  border: 1px solid $black20;
+}
